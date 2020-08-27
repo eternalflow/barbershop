@@ -1,0 +1,48 @@
+.barba-title {
+  @include flex;
+  margin-top: 0;
+  margin-bottom: 44px;
+
+  @extend %small-text;
+  color: $on-white-title-color;
+
+  &::before {
+    @extend %before;
+    background-color: $on-white-title-color;
+    margin-bottom: 13px;
+    @media screen and (min-width: 485px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.portfolio-list {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  & .portfolio-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  & .portfolio-item {
+    align-items: center;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+  }
+
+  & .portfolio-item:not(:last-child) {
+    @media screen and (min-width: 1280px) {
+      margin-right: 30px;
+    }
+  }
+}

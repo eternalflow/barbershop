@@ -1,0 +1,124 @@
+.price-string {
+  @include flex;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.underline {
+  height: 1px;
+  background-color: $on-dark-rgba;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 8px;
+
+  @media (min-width: 768px) {
+    margin-top: 13px;
+  }
+}
+
+.prices-slogan {
+  @include flex;
+  @extend %small-text;
+
+  color: $on-dark-rgba;
+  margin-bottom: 20px;
+
+  &::before {
+    @extend %before;
+    background-color: $on-dark-text-color;
+    margin-bottom: 13px;
+    @media screen and (min-width: 485px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.prices-title {
+  @extend %title-name;
+  color: $main-2-color;
+  margin-bottom: 44px;
+  text-align: start;
+}
+
+.price-item {
+  @extend %description-price;
+  min-width: max-content;
+  font-family: $main-font;
+  color: $on-dark-text-color;
+}
+
+.prices-button {
+  @include button(transparent, $main-2-color);
+  padding: 12px 20px;
+}
+
+.prices-services {
+  background-color: $background-color;
+  background-image: url(../images/prices-services/prices-services-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../images/prices-services/prices-services-mobile@2x.png);
+    background-size: cover;
+  }
+
+  @media (min-width: 768px) {
+    background-image: url(../images/prices-services/prices-services-tablet.png);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/prices-services/prices-services-tablet@2x.png);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url(../images/prices-services/prices-services-desktop.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/prices-services/prices-services-desktop@2x.png);
+    }
+  }
+}
+
+.price-list1 {
+  
+  @media (max-width: 479px) {
+    padding: 30px 10px 10px;
+  }
+  @media (min-width: 480px) {
+    padding: 30px 30px 10px;
+  }
+  @media (min-width: 1280px) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    width: 50%;
+    padding: 30px 40px 30px 40px;
+  }
+}
+
+.price-list2 {
+  margin-bottom: 50px;
+  @media (max-width: 400px) {
+    padding: 10px 10px 30px;
+  }
+  @media (min-width: 401px) {
+    padding: 10px 30px 30px;
+  }
+  @media (min-width: 1280px) {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    width: 50%;
+    padding: 30px 40px;
+    margin: 0;
+  }
+}
+
+.price-list-container {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  @media (min-width: 1280px) {
+    background: none;
+    display: flex;
+    margin-bottom: 50px;
+  }
+}

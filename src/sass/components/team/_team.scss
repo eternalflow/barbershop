@@ -1,0 +1,100 @@
+// Стили для Блока "Наши мастера"
+.team {
+  background-color: $secondary-bg-color;
+  color: $on-white-title-color;
+
+  &-subtitle {
+    @include flex;
+    @extend %small-text;
+    margin-bottom: 20px;
+
+    &::before {
+      @extend %before;
+      background-color: $on-white-title-color;
+      margin-bottom: 13px;
+      @media screen and (min-width: 485px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 44px;
+    text-align: left;
+    @extend %title-name;
+  }
+
+  &-list {
+    @media screen and (min-width: 1280px) {
+      @include centeredflex;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &-item {
+    @media screen and (min-width: 1280px) {
+      width: calc((100% - 6 * 15px) / 3);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  &-item + &-item {
+    @media screen and (max-width: 1279px) {
+      margin-top: 64px;
+    }
+  }
+
+  &-foto {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  &-name {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  &-profession {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
+
+.team-social {
+  @include centeredflex;
+
+  &-item + &-item {
+    margin-left: 10px;
+  }
+
+  &-link {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 75%;
+    background-color: $main-2-color;
+  }
+
+  &-link:focus svg,
+  &-link:hover svg {
+    fill: $accent-color;
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    transition: $animation;
+  }
+}
