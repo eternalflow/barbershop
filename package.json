@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "barbershop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,7 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Project8-andriyd/parcel-project-template"
+    "url": "https://github.com/eternalflow/barbershop"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
